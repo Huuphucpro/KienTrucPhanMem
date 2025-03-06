@@ -1,0 +1,22 @@
+1. Singleton, Factory (method, abstract)...
+
+Tự nghĩ ra bài tập áp dụng
+
+2. No DesignPattern, State, Strategy, Decorator
+
+State: trạng thái, chuyển đổi qua lại giữa các trạng thái
+
+Strategy: trạng thái, không có sự chuyển đổi, độc lập
+
+Decorator: Object căn bản, áp dụng thêm các phần phụ
+
+a. Hình thức thanh toán cho Đơn hàng: Tiền mặt, Chuyển Khoản, Momo, VN Pay --> 3 cách còn lại.
+
+b. Tính lương: Nhân viên--> lương cơ bản  + các loại phụ cấp
+(Lương phụ cấp TP, HT, PHT, TT, TK, PK)
+--> print: Nhân viên : Lương: Lương cơ bản + Lương Phụ Cấp tùy theo chức vụ
+nv1 --> Trưởng Phòng (TP)==> Lương cơ bản + Phụ cấp TP
+
+c. Table: Free(Green)--> Order (Orange)-->Done(Yellow)-->Free()-->Fixing (red)-->Done-->Free
+
+handleRequest-->Table--> color=?
