@@ -1,4 +1,4 @@
-package org.example.Order;
+package org.example.Order.State;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -6,7 +6,6 @@ public class MainpaymentState {
     public static void main(String[] args) {
         PaymentContext paymentContext = new PaymentContext();
 
-        // Chuyển đổi trạng thái thanh toán
         paymentContext.setPaymentState(new CashPaymentState());
         paymentContext.pay(500000);
 

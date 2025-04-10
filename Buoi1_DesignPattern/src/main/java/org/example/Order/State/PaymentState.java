@@ -1,4 +1,4 @@
-package org.example.Order;
+package org.example.Order.State;
 
 // Interface PaymentState - Đại diện cho một trạng thái thanh toán
 public interface PaymentState {
@@ -30,7 +30,7 @@ class VNPayPaymentState implements PaymentState {
     }
 }
 
-// Context - Quản lý trạng thái thanh toán
+// Context - Quản lý tạng thái thanh toán
 class PaymentContext {
     private PaymentState currentState;
 
