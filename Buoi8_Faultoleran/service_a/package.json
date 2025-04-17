@@ -1,0 +1,11 @@
+{
+    "name": "service_a",
+    "version": "1.0.0",
+    "dependencies": {
+        "axios": "^1.8.4",
+        "express": "^4.17.1"
+    },
+    "scripts": {
+        "start": "node app.js"
+    }
+}
