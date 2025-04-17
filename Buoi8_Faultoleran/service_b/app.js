@@ -1,14 +1,20 @@
 const express = require('express');
 const app = express();
-const port = 5002;
+const port = 7002;
+
+// CÁC CỜ ĐỂ MÔ PHỎNG LỖI
+const SIMULATE_DELAY = true;
+const SIMULATE_ERROR = true;
 
 app.get('/data', (req, res) => {
-  // Mô phỏng độ trễ
-  const delay = [0, 2000, 5000][Math.floor(Math.random() * 3)]; // 0, 2, hoặc 5 giây
+  let delay = 0;
+  if (SIMULATE_DELAY) {
+    delay = [0, 2000, 5000][Math.floor(Math.random() * 3)]; // 0, 2, hoặc 5 giây
+  }
+
   setTimeout(() => {
-    // Mô phỏng lỗi (có thể trả về lỗi 500)
-    if (Math.random() < 0.2) { // 20% khả năng lỗi
-      return res.status(500).json({ message: 'Internal Server Error' });
+    if (SIMULATE_ERROR && Math.random() < 0.2) {
+      return res.status(500).json({ message: 'Simulated Internal Server Error' });
     }
     res.json({ data: 'Data from Service B' });
   }, delay);
